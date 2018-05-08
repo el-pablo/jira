@@ -446,6 +446,8 @@ class JIRA(object):
 
         self._session.max_retries = max_retries
 
+        self._session.cert = self._options['client_cert']
+
         if proxies:
             self._session.proxies = proxies
 
